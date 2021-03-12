@@ -1,0 +1,64 @@
+header
+{
+	grid-area: header; /* ce code sert à positionner le header, il faut le référencer avec un grid-area pour que le positionnement fontionne*/
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	background-color: black;
+	color: silver;
+    font-family: 'MedievalSharp';
+}
+header h1
+{
+	display: flex;
+	font-size: 1.5em;
+}
+header p:hover /*  Ici, on ajoute un effet sur les éléments de la nav barre avec un empilement d'ombrage...*/
+{
+	text-shadow: 0 0 4px white,  /* Tout d'abord du blanc */
+	 0 -5px 4px #FFFF33,  /* Ensuite du jaune clair */
+	 2px -10px 6px #FFDD33,  /* Puis du jaune foncé */
+	 -2px -15px 11px #FF8800,  /* Puis du orange */
+	 2px -25px 18px #FF2200;  /* Puis du rouge */
+}
+nav
+{
+	display: flex;
+	justify-content: space-between;
+  font-family: 'MedievalSharp';
+}
+nav p
+{
+	margin-right: 3em;
+	padding-right: 2em;
+	color: silver;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+	header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 4em;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+{
+
+ header
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ }
+ nav
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	text-align: center;
+ }
+}

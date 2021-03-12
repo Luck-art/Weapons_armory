@@ -1,0 +1,311 @@
+body {
+    display: grid;
+    /*cela permet de positionner les éléments */
+    grid-template-areas: "header header header header" "main main main main" "aside aside aside aside" "footer footer footer footer";
+    grid-template-columns: 20% 20% 20% 40%;
+    margin: 0px 0px 0px 0px;
+    /*on retire les espaces présents sur les cotés*/
+    background-color: #9a9a9a;
+}
+
+header {
+    grid-area: header;
+    /* ce code sert à positionner le header, il faut le référencer avec un grid-area pour que le positionnement fontionne*/
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: black;
+    color: silver;
+    font-family: 'MedievalSharp';
+}
+
+header h1 {
+    display: flex;
+    font-size: 1.5em;
+}
+
+header p:hover
+/*  Ici, on ajoute un effet sur les éléments de la nav barre avec un empilement d'ombrage...*/
+
+{
+    text-shadow: 0 0 4px white, /* Tout d'abord du blanc */
+    0 -5px 4px #FFFF33, /* Ensuite du jaune clair */
+    2px -10px 6px #FFDD33, /* Puis du jaune foncé */
+    -2px -15px 11px #FF8800, /* Puis du orange */
+    2px -25px 18px #FF2200;
+    /* Puis du rouge */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'MedievalSharp';
+}
+
+nav p {
+    margin-right: 3em;
+    padding-right: 2em;
+    color: silver;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #9a9a9a;
+    font-family: 'MedievalSharp';
+    min-height: 1000px;
+    margin-top: 5em;
+}
+
+main h2 {
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    font-family: 'MedievalSharp';
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: black;
+    color: silver;
+}
+
+section h3 {
+    text-decoration: underline;
+}
+
+section p {
+    color: silver;
+}
+
+.panier {
+    margin-right: 8px;
+}
+
+#container
+/* premier bloc du footer (Contactez-nous) */
+
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 10px;
+    text-align: center;
+}
+
+#container2
+/* deuxième bloc du footer (Informations) */
+
+{
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    align-items: center;
+}
+
+.range
+/* (Suivez-nous sur) */
+
+{
+    display: flex;
+}
+
+.banniere {
+    grid-area: banniere;
+    background-repeat: no-repeat;
+}
+
+.swaggy {
+    max-width: 100%;
+    width: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+/* Bloc principale du slider */
+
+.slideshow-container {
+    max-width: 650px;
+    position: relative;
+    margin: auto;
+}
+
+.one {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* texte sur l'image */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+}
+
+
+/* Numérotation des images selon le slide (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.the_dot {
+    text-align: center;
+}
+
+
+/* Point de navigation d'images */
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade
+/* durée d'animation */
+
+{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    /* L'animation a une durée de 1.5 seconde */
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: black;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 60%;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+    opacity: .4;
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    /* Au moment ou le slider change d'image il y a un effet de transparence de 4 */
+    to {
+        opacity: 1
+    }
+    /* L'image descend ensuite jusqu'a une opacitée de 1 */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-left: 4em;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 800px;
+        }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    body {
+        font-size: x-large;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 4em;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 800px;
+    }
+    .swaggy {
+        max-width: 100%;
+        height: auto;
+    }
+    .one {
+        max-width: 100%;
+        height: auto;
+    }
+}

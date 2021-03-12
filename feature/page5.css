@@ -1,0 +1,481 @@
+body
+{
+	display: grid;
+	grid-template-areas: "header header header header"
+	                     "aside main main main"
+	                     "footer footer footer footer";
+	grid-template-columns: 20% 20% 20% 40%;
+	font-family: 'MedievalSharp';
+	margin: 0px;
+	background-color:  #9a9a9a;
+}
+header
+{
+	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	background-color: black;
+	color: silver;
+}
+header h1
+{
+	display: flex;
+	font-size: 1.5em;
+}
+header p:hover
+{
+	text-shadow: 0 0 4px white,
+	 0 -5px 4px #FFFF33,
+	  2px -10px 6px #FFDD33,
+	   -2px -15px 11px #FF8800,
+	    2px -25px 18px #FF2200;
+}
+nav
+{
+	display: flex;
+	justify-content: space-between;
+}
+nav p
+{
+	margin-right: 3em;
+	padding-right: 2em;
+	color: silver;
+}
+aside
+{
+	grid-area: aside;
+	margin-left: 1em;
+
+}
+aside nav h1
+{
+	width: 250px;
+	text-align: center;
+}
+aside nav h1:hover
+{
+   text-decoration: underline gold;
+}
+aside nav ul
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: black;
+	list-style-type: none;
+	line-height: 70px;
+	padding: 0px;
+}
+aside  nav ul:hover .sous
+{
+	display: flex;
+}
+aside nav a
+{
+  text-decoration: none;
+  color: white;
+}
+ aside nav a:hover
+{
+	text-shadow: 1px 1px 2px red, 0 0 2em silver, 0 0 0.8em gold;
+	font-size: 1.2em;
+}
+main
+{
+	grid-area: main;
+	height: 2700px;
+}
+footer
+{
+	grid-area: footer;
+	display: flex;
+	font-family: 'MedievalSharp';
+	justify-content: space-around;
+    align-items: baseline;
+    background-color: black;
+    color: silver;
+}
+section h3
+{
+	text-decoration: underline;
+}
+section p
+{
+	color: silver;
+}
+#container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	line-height: 10px;
+	text-align: center;
+}
+#container2
+{
+	display: block;
+	text-align: center;
+	line-height: 10px;
+	align-items: center;
+}
+.range
+{
+	display: flex;
+}
+.axe
+{
+	line-height: 30px;
+	text-align: center;
+}
+.sous
+{
+    display: none;
+    background-color: gray;
+}
+.sous li
+{
+	align-items: center;
+}
+.sous li:hover
+{
+	background-color: #483838;
+	width: 100%;
+	text-align: center;
+}
+.yolo
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+	margin-top: 20px;
+}
+.one
+{
+    border: 2px solid black;
+    border-radius: 5%;
+}
+.botte,.fauchon,.arbalete,.guisarme,.armor,.fauchon,.robe,.robe2,.masse,.calice,.robe3,.hache
+{
+    width: 300px;
+	background-color: silver;
+    border: 5px solid black;
+}
+#button
+{
+	margin:2px;
+	box-shadow:  hsla(0, 0%, 26.66%, 0.8) 3px 3px;
+	background-color: #8ea9bb;
+	border-radius: 10%;
+}
+.button_nav
+{
+	display: table;
+	margin: auto;
+	margin-top: 4em;
+}
+.button_nav a
+{
+	text-decoration: none;
+}
+.item_fleche
+{
+	display: table-cell;
+	width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color:transparent;
+    color:#dddddd;
+    cursor: no-drop;
+    border:1px solid black;
+}
+.item_one
+{
+    display: table-cell;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    color: black;
+    border:1px solid black;
+}
+.item_one:hover
+{
+	background-color: black;
+	color: gold;
+}
+.item
+{
+	display: table-cell;
+	width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    color: black;
+    border:1px solid black;
+}
+.item:hover
+{
+	background-color: black;
+	color: gold;
+}
+#myBtn 
+{
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 60%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: .4;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+@media only screen and (min-width:640px) and (max-width:1049px)
+{
+  body
+ {
+  display: grid;
+  grid-template-areas: "header header header header"
+                       "aside aside aside aside"
+                       "main main main main"
+                       "footer footer footer footer";
+  grid-template-columns: 20% 20% 20% 40%;
+  max-width: 1049px;
+  min-width: 640px;
+}
+ header
+ {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ nav
+ {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 4em;
+ }
+ main
+ {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 3500px;
+ }
+ aside
+ {
+  grid-area: aside;
+ }
+ aside nav 
+{
+  width: 500px;
+  margin-left: 10em;
+  text-align: center;
+}
+aside nav li h1:hover
+{
+  margin-left: 6em;
+}
+ footer
+ {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 800px;
+ }
+ .sous
+ {
+  width: 500px;
+  align-items: center;
+ }
+ .button_nav
+ {
+ 	margin: 3em 0em 0em 20em;
+ }
+}
+@media screen and (min-width:400px) and (max-width:639px) 
+{
+ body
+ {
+  display: grid;
+  grid-template-areas: "header header header header"
+                       "aside aside aside aside"
+                       "main main main main"
+                       "footer footer footer footer";
+  grid-template-columns: 20% 20% 20% 40%;
+ }
+ header
+ {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ nav
+ {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 4em;
+ }
+ main
+ {
+  grid-area: main;
+  height: 5400px;
+ }
+ aside
+ {
+  grid-area: aside;
+  margin-right: 5em;
+ }
+ aside  nav ul
+ {
+   background-color: transparent;
+ }
+ aside nav h1
+ {
+  margin-left: 4em;
+ }
+ footer
+ {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 800px;
+ }
+.sous
+{
+  display: flex;
+}
+.axe
+{
+  min-width: 400px;
+  max-width: 639px;
+  width: auto;
+}
+.yolo
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 70px;
+}
+.botte,.fauchon,.arbalete,.guisarme,.armor,.fauchon,.robe,.robe2,.masse,.calice,.robe3,.hache
+{
+    width: auto;
+}
+.button_nav
+{
+	margin: auto;
+	margin-top: 2em;
+}
+}
+@media only screen and (max-width:399px)
+{
+   body
+ {
+  display: grid;
+  grid-template-areas: "header header header header"
+                       "aside aside aside aside"
+                       "main main main main"
+                       "footer footer footer footer";
+  grid-template-columns: 20% 20% 20% 40%;
+  max-width: 399px;
+  min-width: 150px;
+ }
+header
+ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: auto;
+ }
+ nav
+ {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 4em;
+ }
+  main
+ {
+  grid-area: main;
+  height: 5100px;
+  max-width: 100%;
+  width: auto;
+ }
+ aside
+ {
+  grid-area: aside;
+  margin-right: 5em;
+  max-width: 100%;
+  width: auto;
+ }
+ aside  nav ul
+ {
+   background-color: transparent;
+ }
+ footer
+ {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 800px;
+  max-width: 100%;
+  width: auto;
+ }
+.slideshow-container
+{
+  display: none;
+}
+.sous
+{
+  display: flex;
+  max-width: 100%
+  width: auto;
+}
+.axe
+{
+  width: auto;
+}
+.yolo
+ {
+  display: flex;
+  flex-direction: column;
+  max-width: 399px;
+  width: auto;
+ }
+.botte,.fauchon,.arbalete,.guisarme,.armor,.fauchon,.robe,.robe2,.masse,.calice,.robe3,.hache
+{
+    width: auto;
+}
+.button_nav
+{
+	margin: auto;
+	margin-top: 3em;
+}
+}

@@ -1,0 +1,258 @@
+body
+/* On utilise le css-grid pour positionner les différentes parties et éléments de la page */
+
+{
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+    grid-template-columns: 20% 20% 20% 40%;
+    /* On répartie l'espace que occupe chaques colonnes sur la page web */
+    margin: 0px 0px 0px 0px;
+    /* On enlève tous espace inutile sur les bords de la page */
+    background-color: #9a9a9a;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: black;
+    color: silver;
+}
+
+header h1 {
+    display: flex;
+    font-size: 1.5em;
+    font-family: 'MedievalSharp';
+}
+
+header p:hover {
+    text-shadow: 0 0 4px white, /* Si vous passez votre souris sur un élément, vous pouvez constater que la premiere couleure qui se dégage du texte est du blanc */
+    0 -5px 4px #FFFF33, /* Si vous passez votre souris sur un élément, vous pouvez constater que la deuxième couleure qui se dégage du texte est du jaune */
+    2px -10px 6px #FFDD33, /* Si vous passez votre souris sur un élément, vous pouvez constater que la troisième couleure qui se dégage du texte est du jaune bien plus foncé que le précédent */
+    -2px -15px 11px #FF8800, /* Si vous passez votre souris sur un élément, vous pouvez constater que la quatrième couleure qui se dégage du texte est du orange  */
+    2px -25px 18px #FF2200;
+    /* Si vous passez votre souris sur un élément, vous pouvez constater que la cinquième couleure qui se dégage du texte est du rouge  */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'MedievalSharp';
+}
+
+nav p {
+    margin-right: 3em;
+    padding-right: 2em;
+    color: silver;
+}
+
+main {
+    grid-area: main;
+    min-height: 1100px;
+    font-family: 'MedievalSharp';
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    font-family: 'MedievalSharp';
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: black;
+    color: silver;
+}
+
+section h3 {
+    text-decoration: underline;
+}
+
+section p {
+    color: silver;
+}
+
+.panier {
+    margin-right: 8px;
+}
+
+.bloc {
+    padding: 16px;
+    background-color: #242424;
+    text-align: center;
+    margin-top: 6.5em;
+    margin-left: 3em;
+    margin-right: 3em;
+    color: silver;
+    border: 3px solid #8b4513;
+}
+
+input[type=text],
+input[type=password]
+/* Ici on règle les dimensions des champs de saisie du formulaire */
+
+{
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn
+/* css pour le design du bouton "register" */
+
+{
+    background-color: black;
+    color: gold;
+    font-family: 'MedievalSharp';
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover
+/* Lorsque l'on passe sur le bouton... */
+
+{
+    opacity: 1;
+}
+
+
+/* Add a blue text color to links */
+
+a {
+    color: dodgerblue;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 10px;
+    text-align: center;
+}
+
+#container2 {
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    align-items: center;
+}
+
+.range {
+    display: flex;
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: black;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 60%;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+    opacity: .4;
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+/* Responsive format tablette  */
+
+{
+    body {
+        display: grid;
+        grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+        grid-template-columns: 20% 20% 20% 40%;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 4em;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 800px;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px)
+/* Responsive format smartphone  */
+
+{
+    body {
+        display: grid;
+        grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+        grid-template-columns: 20% 20% 20% 40%;
+        font-size: x-large;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 4em;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 800px;
+    }
+    .bloc {
+        margin-bottom: 3.5em;
+    }
+}
