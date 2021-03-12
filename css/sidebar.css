@@ -1,0 +1,15 @@
+.sidebar
+{
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	margin-top: 15px;
+	margin-right: 20px;
+	float: right;
+	max-width: 800px;
+	min-width: 250px;
+	width: 90%;
+	font-family: 'MedievalSharp';
+}

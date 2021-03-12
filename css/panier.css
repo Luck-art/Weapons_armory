@@ -1,0 +1,189 @@
+body /* On utilise le css-grid pour positionner les différentes parties et éléments de la page */
+{
+	display: grid; 
+	grid-template-areas: "header header header header" 
+	                     "main main main main"
+	                     "footer footer footer footer";
+	grid-template-columns: 20% 20% 20% 40%; /* On répartie l'espace que occupe chaques colonnes sur la page web */
+    margin: 0px 0px 0px 0px; /* On enlève tous espace inutile sur les bords de la page */
+}
+header /* On positionne les éléments grâce à flexbox et à css-grid */
+{
+	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	font-family: 'MedievalSharp';
+	background-color: black;
+	color: silver;
+}
+header h1
+{
+	display: flex;
+	font-size: 1.5em;
+}
+header p:hover /* Ici on réalise l'effet de flamme lorsque l'on passe sur élément de la nav barre grâce à un effet d'ombrage de texte que l'on décale au fur et à mesure et que l'on change de couleur*/
+{
+	text-shadow: 0 0 4px white, /* Si vous passez votre souris sur un élément, vous pouvez constater que la premiere couleure qui se dégage du texte est du blanc */
+	 0 -5px 4px #FFFF33, /* Si vous passez votre souris sur un élément, vous pouvez constater que la deuxième couleure qui se dégage du texte est du jaune */
+	  2px -10px 6px #FFDD33,  /* Si vous passez votre souris sur un élément, vous pouvez constater que la troisième couleure qui se dégage du texte est du jaune bien plus foncé que le précédent */
+	   -2px -15px 11px #FF8800, /* Si vous passez votre souris sur un élément, vous pouvez constater que la quatrième couleure qui se dégage du texte est du orange  */
+	    2px -25px 18px #FF2200; /* Si vous passez votre souris sur un élément, vous pouvez constater que la cinquième couleure qui se dégage du texte est du rouge  */
+}
+nav
+{
+	display: flex;
+	justify-content: space-between;
+}
+nav p
+{
+	margin-right: 3em;
+	padding-right: 2em;
+	color: silver;
+}
+main 
+{
+	grid-area: main;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	min-height: 1000px;
+	padding-top: 2.3em;
+	background-color: #9a9a9a;
+	font-family: 'MedievalSharp';
+}
+main article
+{
+	max-width: 30%;
+}
+main p
+{
+	max-width: 30%;
+}
+fieldset
+{
+	background-color: silver;
+}
+form
+{
+	font-family: 'MedievalSharp';
+	
+}
+footer
+{
+  grid-area: footer;
+  display: flex;
+  font-family: 'MedievalSharp';
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: black;
+  color: silver;
+}
+section h3
+{
+	text-decoration: underline;
+}
+section p
+{
+	color: silver;
+}
+.panier
+{
+	margin-right: 8px;
+}
+
+section h3
+{
+	text-decoration: underline;
+}
+section p
+{
+	color: silver;
+}
+#container /* premier bloc du footer (Contactez-nous) */
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	line-height: 10px;
+	text-align: center;
+}
+#container2 /* deuxième bloc du footer (Informations) */
+{
+	display: block;
+	text-align: center;
+	line-height: 10px;
+	align-items: center;
+}
+.range /* (Suivez-nous sur) */
+{
+	display: flex;
+}
+#myBtn 
+{
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 60%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: .4;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) /* Responsive format tablette */
+{
+ nav
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	text-align: center;
+ 	margin-left: 4em;
+ }
+  main
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	height: auto; 
+ }
+ footer
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-around;
+ 	align-items: center;
+ 	height: 800px;	
+ }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) /* Responsive format smartphone */
+{
+body {
+	font-size: x-large;
+}
+nav
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	text-align: center;
+ 	margin-left: 4em;
+ }
+ footer
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-around;
+ 	align-items: center;
+ 	height: 800px;	
+ }
+}

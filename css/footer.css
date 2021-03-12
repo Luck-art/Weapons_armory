@@ -1,0 +1,60 @@
+footer
+{
+  grid-area: footer;
+  display: flex;
+  font-family: 'MedievalSharp';
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: black;
+  color: silver;
+  margin-top: 40px;
+}
+section h3
+{
+	text-decoration: underline;
+}
+section p
+{
+	color: silver;
+}
+#container /* premier bloc du footer (Contactez-nous) */
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	line-height: 10px;
+	text-align: center;
+}
+#container2 /* deuxième bloc du footer (Informations) */
+{
+	display: block;
+	text-align: center;
+	line-height: 10px;
+	align-items: center;
+}
+.range /* (Suivez-nous sur) */
+{
+	display: flex;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	footer
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-around;
+ 	align-items: center;
+ 	height: 800px;	
+ }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+{
+footer
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-around;
+ 	align-items: center;
+ 	height: 800px;	
+ }
+ 
+}
